@@ -1,6 +1,6 @@
-# Rotten Tomatoes Rest Client
+# jQuery plugin/wrapper for Rotten Tomatoes REST API
 
-Rotten Tomatoes REST client
+jQuery plugin/wrapper for Rotten Tomatoes REST API
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
