@@ -1,4 +1,4 @@
-# jQuery plugin/wrapper for Rotten Tomatoes REST API
+# Rotten Tomatoes REST API Wrapper
 
 jQuery plugin/wrapper for Rotten Tomatoes REST API
 
