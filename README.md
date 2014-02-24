@@ -127,3 +127,6 @@ Assuming that you don't see any red, you're ready to go. Just be sure to run `gr
 1. Update the documentation to reflect any changes.
 1. Push to your fork and submit a pull request.
 
+**************************************************
+
+@ [The Jackal of Javascript](http://thejackalofjavascript.com)
