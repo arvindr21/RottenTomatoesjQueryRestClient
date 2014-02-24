@@ -1,0 +1,26 @@
+{
+  "name": "rtApi",
+  "title": "Rotten Tomatoes Rest Client",
+  "description": "Rotten Tomatoes REST client",
+  "version": "0.1.0",
+  "homepage": "https://github.com/arvindr21/rtRestClient",
+  "author": {
+    "name": "Arvind Ravulavaru",
+    "email": "arvind.ravulavaru@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/arvindr21/rtRestClient.git"
+  },
+  "bugs": "https://github.com/arvindr21/rtRestClient/issues",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/arvindr21/rtRestClient/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Rotten Tomatoes Rest Client Test Suite</title>
+  <!-- Load local jQuery. This can be overridden with a ?jquery=___ param. -->
+  <script src="libs/jquery/jQuery.js"></script>
+  <!-- Load local lib and tests. -->
+
+ </head>
+<body>
+ 
+ <div id="holder">
+
+ </div>
+  <script src="src/rtApi.js"></script>
+  <script type="text/javascript">
+
+    var rtClient = new $.rtApi({apiKey : "qwgqtm5rwfv2wgp9etr83hap"});
+    
+
+    rtClient.searchMovies({id : 770672122 , q : "iron"},function (data) {     
+        console.log(data);
+    });
+
+
+
+  </script>
+
+</body>
+</html>
