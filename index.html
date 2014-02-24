@@ -8,24 +8,14 @@
   <!-- Load local lib and tests. -->
 
  </head>
-<body>
- 
- <div id="holder">
-
- </div>
-  <script src="src/rtApi.js"></script>
-  <script type="text/javascript">
-
-    var rtClient = new $.rtApi({apiKey : "qwgqtm5rwfv2wgp9etr83hap"});
-    
-
-    rtClient.searchMovies({id : 770672122 , q : "iron"},function (data) {     
+ <body>
+ <script src="src/rtApi.js"></script>
+ <script type="text/javascript">
+  var rtClient = new $.rtApi({apiKey : "qwgqtm5rwfv2wgp9etr83hap"});
+      rtClient.searchMovies({q : "iron"},function (data) {     
         console.log(data);
-    });
-
-
-
-  </script>
+      });
+</script>
 
 </body>
 </html>
