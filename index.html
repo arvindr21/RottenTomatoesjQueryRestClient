@@ -1,1 +1,167 @@
-My GitHub Page
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Arvind Ravulavaru">
+ 
+    <title>Rotten Tomatoes REST jQuery Wrapper</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/dashboard.css" rel="stylesheet">
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?autoload=true&amp;skin=desert&amp;lang=css" defer="defer"></script>
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="javascript:">Rotten Tomatoes REST jQuery Wrapper</a>
+        </div>
+       
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
+            <li class="active"><a href="javascript:" data-target="overview">Overview</a></li>
+            <li><a href="javascript:" data-target="getBoxOffice">getBoxOffice</a></li>
+            <li><a href="javascript:" data-target="getInTheaters">getInTheaters</a></li>
+             <li><a href="javascript:" data-target="getOpeningMovies">getOpeningMovies</a></li>
+              <li><a href="javascript:" data-target="getUpcomingMovies">getUpcomingMovies</a></li>
+               <li><a href="javascript:" data-target="getTopRentals">getTopRentals</a></li>
+                <li><a href="javascript:" data-target="getCurrentDVDReleases">getCurrentDVDReleases</a></li>
+                 <li><a href="javascript:" data-target="getNewDVDReleases">getNewDVDReleases</a></li>
+                  <li><a href="javascript:" data-target="getUpcomingDVDs">getUpcomingDVDs</a></li>
+                   <li><a href="javascript:" data-target="getMovieInfoById">getMovieInfoById</a></li>
+                    <li><a href="javascript:" data-target="getCastInfoByMovieId">getCastInfoByMovieId</a></li>
+                     <li><a href="javascript:" data-target="getClipsByMovieId">getClipsByMovieId</a></li>
+                      <li><a href="javascript:" data-target="getReviewsByMovieId">getReviewsByMovieId</a></li>
+                       <li><a href="javascript:" data-target="getSimilarMoviesByMovieId">getSimilarMoviesByMovieId</a></li>
+                        <li><a href="javascript:" data-target="getMovieAliasByMovieId">getMovieAliasByMovieId</a></li>
+                        <li><a href="javascript:" data-target="searchMovies">searchMovies</a></li>
+          </ul>
+         
+        </div>
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <h1 class="page-header">Rotten Tomatoes REST jQuery Wrapper</h1>
+            
+          <div id="loader">
+            <p>
+<h3>Getting Started</h3>
+
+<p>Download the <a target="_blank" href="https://raw.github.com/arvindr21/rtRestClient/master/dist/rtApi.min.js">production version</a> or the <a href="https://raw.github.com/arvindr21/rtRestClient/master/dist/rtApi.js" target="_blank">development version</a>.</p>         
+              </p>
+              <p>
+
+                  <pre class="prettyprint">
+&lt;script src="dist/rtApi.min.js"></script>
+&lt;script type="text/javascript">
+  var rtClient = new $.rtApi({apiKey : "APIKEY"}); //Visit http://developer.rottentomatoes.com/page
+      rtClient.searchMovies({q : "iron"},function (data) {     
+        console.log(data); 
+      });
+&lt;/script>
+
+</pre>
+<h3>Output</h3>
+<pre class="prettyprint">
+{
+    "total": 237,
+    "movies": [{
+        "id": "714976247",
+        "title": "Iron Man",
+        "year": 2008,
+        "mpaa_rating": "PG-13",
+        "runtime": 126,
+        "critics_consensus": "Director Jon Favreau and star Robert Downey make this smart, high impact superhero movie one that even non-comics fans can enjoy.",
+        "release_dates": {
+            "theater": "2008-04-14",
+            "dvd": "2008-09-30"
+        },
+        "ratings": {
+            "critics_rating": "Certified Fresh",
+            "critics_score": 93,
+            "audience_rating": "Upright",
+            "audience_score": 91
+        },
+        "synopsis": "",
+        "posters": {
+            "thumbnail": "http://content7.flixster.com/movie/10/93/35/10933541_mob.jpg",
+            "profile": "http://content7.flixster.com/movie/10/93/35/10933541_pro.jpg",
+            "detailed": "http://content7.flixster.com/movie/10/93/35/10933541_det.jpg",
+            "original": "http://content7.flixster.com/movie/10/93/35/10933541_ori.jpg"
+        },
+        "abridged_cast": [{
+            "name": "Robert Downey Jr.",
+            "id": "162654529",
+            "characters": ["Tony Stark"]
+        }, {
+            "name": "Terrence Howard",
+            "id": "162652991",
+            "characters": ["Lt. Colonel James Rhodes"]
+        }, {
+            "name": "Jeff Bridges",
+            "id": "162655890",
+            "characters": ["Obadiah Stane"]
+        }, {
+            "name": "Gwyneth Paltrow",
+            "id": "162653966",
+            "characters": ["Virginia \"Pepper\" Potts"]
+        }, {
+            "name": "Leslie Bibb",
+            "id": "563122407",
+            "characters": ["Christine Everhart"]
+        }],
+        "alternate_ids": {
+            "imdb": "0371746"
+        },
+        "links": {
+            "self": "http://api.rottentomatoes.com/api/public/v1.0/movies/714976247.json",
+            "alternate": "http://www.rottentomatoes.com/m/iron_man/",
+            "cast": "http://api.rottentomatoes.com/api/public/v1.0/movies/714976247/cast.json",
+            "clips": "http://api.rottentomatoes.com/api/public/v1.0/movies/714976247/clips.json",
+            "reviews": "http://api.rottentomatoes.com/api/public/v1.0/movies/714976247/reviews.json",
+            "similar": "http://api.rottentomatoes.com/api/public/v1.0/movies/714976247/similar.json"
+        }
+    }, 
+    ........... 9 more results
+}
+</pre>
+<h3>Click on the Links on the left hand site for other APIs</h3>
+
+              </p>
+              </div>
+              <hr />
+              <footer>
+        <a href="http:thejackalofjavascript.com" target="_blank">The Jackal of Javascript</a>
+    </footer>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    
+  </body>
+</html>
