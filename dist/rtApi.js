@@ -177,9 +177,10 @@ $.rtApi = function(opts) {
 };
 
 
+
 $.rtApi.options = {
   base : "http://api.rottentomatoes.com/api/public/v1.0/",
-  baseUrl : this.base + "lists",
+  baseUrl : "http://api.rottentomatoes.com/api/public/v1.0/" + "lists",
   apiKey : undefined,
   errorMessage : "Need API Key to continue. Visit http://developer.rottentomatoes.com/page",
   optsSearchErrorMessage : "Search text is required",
