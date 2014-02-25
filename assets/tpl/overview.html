@@ -86,6 +86,24 @@
  <input type="text" class="form-control" id="search"  placeholder="Search a Movie">
 
 
+    <div id="wrapper">
+    <div id="columns">
+       
+    
+        
+    </div>
+</div>            
+    
+
+<script type="text/template" id="template">    
+     <div class="pin">
+            <img src="@@img@@" alt="@@label@@"/>
+            <h3>@@label@@</h3>
+            <p>
+                @@description@@
+            </p>
+        </div>
+</script>
 
 
 <script src="assets/js/rtApi.min.js"></script>
@@ -94,20 +112,25 @@ $(".nav.nav-sidebar li").removeClass("active").eq(0).addClass("active")
 var rtClient = new $.rtApi({apiKey : "qwgqtm5rwfv2wgp9etr83hap"}); 
 $('#search').delayKeyup(function(){
     var _self = $('#search');
-    _self.addClass("loading"); 
    var $val = (_self.val());   
-   rtClient.searchMovies({q : $val},function (data) {     
+   if($.trim($val) <= 0) { $("#columns").html("");     return; }
+    _self.addClass("loading"); 
+   
+   rtClient.searchMovies({q : $val, page_limit : 27},function (data) {     
         // build DOM here
-            
-
-
-
-
-
-
+        var html = "";
+        $tmpl = $("#template").html();
+        $(data.movies).each(function(k,v){
+                t = $tmpl;
+                html += t.replace("@@img@@",v.posters.profile).replace(/@@label@@/g, v.title).replace("@@description@@", $.trim(this.synopsis).length > 0  ? this.synopsis : this.critics_consensus  );
+        });
+        $("#columns").html(html);
+        $('html, body').animate({
+            scrollTop: $("#columns").offset().top - 179
+        },999);
         _self.removeClass("loading"); 
       });
-}, 1241);
+}, 599);
 
 
 </script>
