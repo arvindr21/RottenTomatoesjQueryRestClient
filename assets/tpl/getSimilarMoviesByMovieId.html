@@ -1,0 +1,55 @@
+<div class="row">
+<h4>
+<code>getSimilarMoviesByMovieId(args, callback)</code>
+<br/><br/>
+<pre>
+ var rtClient = new $.rtApi({apiKey : "APIKEY"}); //Visit http://developer.rottentomatoes.com/page
+ rtClient.getSimilarMoviesByMovieId({id: 770672122},function (data) {     
+    console.log(data); 
+ });
+ 
+ // or
+ 
+ rtClient.getSimilarMoviesByMovieId({id: 770672122, limit : 5},
+ function (data) {     
+    console.log(data); 
+ });
+</pre>
+</h4>
+
+<table class="table table-condensed table-bordered">
+      <thead>
+        <tr>
+           <th>Params</th>
+            <th>Type</th>
+          <th>Default</th>
+          <th>isRequired</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>args.id</td>
+          <td><em>string</em></td>
+          <td>--</td>
+          <td>Yes</td>
+          <td>Movie ID. You can use the movies search endpoint or peruse the lists of movies/dvds to get the Movie ID</td>
+        </tr>
+        <tr>
+          <td>args.limit</td>
+          <td><em>string</em></td>
+          <td>5</td>
+          <td>No</td>
+          <td>Limit the number of similar movies to show</td>
+        </tr>
+     
+
+      
+      </tbody>
+    </table>
+
+
+</div>
+<script type="text/javascript">
+$(".nav.nav-sidebar li").removeClass("active").eq(13).addClass("active")
+</script>

@@ -1,0 +1,60 @@
+<div class="row">
+<h4>
+<code>getCurrentDVDReleases(args, callback)</code>
+<br/><br/>
+<pre>
+ var rtClient = new $.rtApi({apiKey : "APIKEY"}); //Visit http://developer.rottentomatoes.com/page
+ rtClient.getCurrentDVDReleases(function (data) {     
+    console.log(data); 
+ });
+ 
+ // or
+ 
+ rtClient.getCurrentDVDReleases({page_limit : 9, page : 2, country : "in"},function (data) {     
+    console.log(data); 
+ });
+</pre>
+</h4>
+
+<table class="table table-condensed table-bordered">
+      <thead>
+        <tr>
+           <th>Params</th>
+            <th>Type</th>
+          <th>Default</th>
+          <th>isRequired</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>args.page_limit</td>
+          <td><em>string</em></td>
+          <td>16</td>
+          <td>No</td>
+          <td>The amount of movies in theaters to show per page</td>
+        </tr>
+        <tr>
+          <td>args.page</td>
+          <td><em>string</em></td>
+          <td>1</td>
+          <td>No</td>
+          <td>The selected page of in theaters movies</td>
+        </tr>
+         <tr>
+          <td>args.country</td>
+          <td><em>string</em></td>
+          <td>"us"</td>
+          <td>No</td>
+          <td>Provides localized data for the selected country (ISO 3166-1 alpha-2) if available. Otherwise, returns US data.</td>
+        </tr>
+
+      
+      </tbody>
+    </table>
+
+
+</div>
+<script type="text/javascript">
+$(".nav.nav-sidebar li").removeClass("active").eq(6).addClass("active")
+</script>

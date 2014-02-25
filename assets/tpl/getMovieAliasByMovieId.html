@@ -1,0 +1,55 @@
+<div class="row">
+<h4>
+<code>getMovieAliasByMovieId(args, callback)</code>
+<br/><br/>
+<pre>
+ var rtClient = new $.rtApi({apiKey : "APIKEY"}); //Visit http://developer.rottentomatoes.com/page
+ rtClient.getMovieAliasByMovieId({id: 770672122},function (data) {     
+    console.log(data); 
+ });
+ 
+ // or
+ 
+ rtClient.getSimilarMoviesByMovieId({id: 770672122, type : 'imdb'},
+ function (data) {     
+    console.log(data); 
+ });
+</pre>
+</h4>
+
+<table class="table table-condensed table-bordered">
+      <thead>
+        <tr>
+           <th>Params</th>
+            <th>Type</th>
+          <th>Default</th>
+          <th>isRequired</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>args.id</td>
+          <td><em>string</em></td>
+          <td>--</td>
+          <td>Yes</td>
+          <td>Movie ID. You can use the movies search endpoint or peruse the lists of movies/dvds to get the Movie ID</td>
+        </tr>
+        <tr>
+          <td>args.type</td>
+          <td><em>string</em></td>
+          <td>'imdb'</td>
+          <td>No</td>
+          <td>Only supports imdb lookup at this time</td>
+        </tr>
+     
+
+      
+      </tbody>
+    </table>
+
+
+</div>
+<script type="text/javascript">
+$(".nav.nav-sidebar li").removeClass("active").eq(14).addClass("active")
+</script>
