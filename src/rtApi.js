@@ -1,11 +1,6 @@
-/*
- * rtApi
- * https://github.com/arvindr21/rtRestClient
- *
- * Copyright (c) 2014 Arvind Ravulavaru
- * Licensed under the MIT license.
- */
-
+/*! Rotten Tomatoes Rest Client - v0.1.0 - 2014-02-25
+* https://github.com/arvindr21/rtRestClient
+* Copyright (c) 2014 Arvind Ravulavaru; Licensed MIT */
 (function($) {
 $.rtApi = function(opts) {
   
@@ -48,7 +43,7 @@ $.rtApi = function(opts) {
 
     this.getUpcomingMovies = function(args,callback){
         if(args instanceof Function){callback = args; args = undefined; } // fallback for a direct callback!
-        args = $.extend({}, {page_limit : 16, page : 1, country : "us"} , args );
+        args = $.extend({}, opts.optsLong , args );
         opts.url = opts.baseUrl+"/movies/upcoming.json?page_limit="+args.page_limit+"&page="+args.page+"&country="+args.country+"&apikey="+opts.apiKey;
         this.crossDomainAjaxer(opts.url, callback);
     };
@@ -135,7 +130,7 @@ $.rtApi = function(opts) {
         if(args instanceof Function){callback = args; args = undefined; } // fallback for a direct callback!
         args = $.extend({}, opts.search , args );
         if(!args.q){this.showError(opts.optsSearchErrorMessage); return false;}
-        opts.url = opts.base+"movies.json?q="+args.q+"&page_limit="+args.page_limit+"&page="+args.page+"&apikey="+opts.apiKey;
+        opts.url = opts.base+"movies.json?q="+encodeURI(args.q)+"&page_limit="+args.page_limit+"&page="+args.page+"&apikey="+opts.apiKey;
         this.crossDomainAjaxer(opts.url, callback);
     };
 
@@ -194,7 +189,7 @@ $.rtApi.options = {
   limit : {limit : 5},
   lookType : {type : "imdb"},
   search : {page_limit : 10 , page : 1},
-  optsMega : {review_type : "top_critic", page_limit : 16, page : 1, country : "us"},
+  optsMega : {review_type : "all", page_limit : 16, page : 1, country : "us"},
   optsIDErrorMessage : "Invalid Movie ID -  expected Format : { id : xxxxxxxxx }"
 };
 }(jQuery));
