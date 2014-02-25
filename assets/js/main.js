@@ -17,3 +17,14 @@ $(document).ready(function (argument) {
         $.loader(loader, $(this).data("target"));
     });
 });
+
+(function ($) {
+        $.fn.delayKeyup = function(callback, ms){
+            var timer = 0;
+            $(this).keyup(function(){                   
+                clearTimeout (timer);
+                timer = setTimeout(callback, ms);
+            });
+            return $(this);
+        };
+})(jQuery);

@@ -16,7 +16,7 @@
 
 </pre>
 <h3>Output</h3>
-<pre class="prettyprint">
+<pre class="prettyprint" style="height:199px;">
 {
     "total": 237,
     "movies": [{
@@ -79,10 +79,25 @@
     ........... 9 more results
 }
 </pre>
-<h3>Click on the Links on the left hand site for other APIs</h3>
+<h3>Example</h3>
 
               </p>
 
-              <script type="text/javascript">
+ <input type="text" class="form-control" id="search"  placeholder="Search a Movie">
+
+
+
+
+<script src="js/rtApi.js"></script>
+<script type="text/javascript">
 $(".nav.nav-sidebar li").removeClass("active").eq(0).addClass("active")
+$('#search').delayKeyup(function(){ 
+   var $val = ($('#search').val());
+    var rtClient = new $.rtApi({apiKey : "qwgqtm5rwfv2wgp9etr83hap"}); //Visit http://developer.rottentomatoes.com/page
+      rtClient.searchMovies({q : $val},function (data) {     
+        console.log(data); 
+      });
+}, 1241);
+
+
 </script>
