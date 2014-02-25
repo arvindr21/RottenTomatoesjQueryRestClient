@@ -1,6 +1,8 @@
 # Rotten Tomatoes jQuery Rest Client
 
-jQuery plugin/wrapper for Rotten Tomatoes REST API
+# Demo
+
+Checkout the demo & documentation [here](http://arvindr21.github.io/RottenTomatoesjQueryRestClient)
 
 ## Getting Started
 Download the [production version][min] or the [development version][max].
@@ -86,14 +88,11 @@ Output
 ````
 
 
-## API
-List of available methods - [here](http://arvindr21.github.io/RottenTomatoesjQueryRestClient/)
-
 ## Documentation
-_(Coming soon)_
+Documentation : [here](http://arvindr21.github.io/RottenTomatoesjQueryRestClient)
 
 ## Examples
-_(Coming soon)_
+Example : [here](http://arvindr21.github.io/RottenTomatoesjQueryRestClient)
 
 ## Release History
 _(Nothing yet)_
