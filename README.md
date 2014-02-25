@@ -1,4 +1,4 @@
-# Rotten Tomatoes REST API Wrapper
+# Rotten Tomatoes jQuery Rest Client
 
 jQuery plugin/wrapper for Rotten Tomatoes REST API
 
@@ -85,6 +85,9 @@ Output
 }
 ````
 
+
+## API
+List of available methods - [here](http://arvindr21.github.io/RottenTomatoesjQueryRestClient/)
 
 ## Documentation
 _(Coming soon)_
