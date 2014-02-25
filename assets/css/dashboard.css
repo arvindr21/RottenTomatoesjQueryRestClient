@@ -135,3 +135,14 @@ footer
   background: #EB3737;
   color:#eee;
 }
+
+.loading
+{
+    background:url('../img/loading.gif') no-repeat right center;
+
+}
+
+#search
+{
+  width: 251px !important;
+}

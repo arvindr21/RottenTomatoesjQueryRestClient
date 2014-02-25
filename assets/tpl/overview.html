@@ -88,14 +88,24 @@
 
 
 
-<script src="js/rtApi.js"></script>
+<script src="assets/js/rtApi.min.js"></script>
 <script type="text/javascript">
 $(".nav.nav-sidebar li").removeClass("active").eq(0).addClass("active")
-$('#search').delayKeyup(function(){ 
-   var $val = ($('#search').val());
-    var rtClient = new $.rtApi({apiKey : "qwgqtm5rwfv2wgp9etr83hap"}); //Visit http://developer.rottentomatoes.com/page
-      rtClient.searchMovies({q : $val},function (data) {     
-        console.log(data); 
+var rtClient = new $.rtApi({apiKey : "qwgqtm5rwfv2wgp9etr83hap"}); 
+$('#search').delayKeyup(function(){
+    var _self = $('#search');
+    _self.addClass("loading"); 
+   var $val = (_self.val());   
+   rtClient.searchMovies({q : $val},function (data) {     
+        // build DOM here
+            
+
+
+
+
+
+
+        _self.removeClass("loading"); 
       });
 }, 1241);
 
