@@ -96,33 +96,33 @@ body {
 }
 
 .navbar-inverse {
-background-color: #2b7200;
-border-color: #2b7200;
+background-color: #AD3A7F;
+border-color: #AD3A7F;
 }
 
 .navbar-inverse .navbar-brand {
-color: #fded00;
+color: #EBEBE9;
 }
 
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-color: #fded00;
+color: #EBEBE9;
 background-color: transparent;
 }
 
 a {
-color: #CF4400;
+color: #000;
 text-decoration: none;
 }
 
 .nav-sidebar > .active > a {
-color: #2b7200;
-background-color: #fded00;
+color: #fff;
+background-color: #000;
 }
 
 .nav>li>a:hover, .nav>li>a:focus {
 text-decoration: none;
-color: #fded00;
-background-color: #2b7200;
+color: #000;
+background-color: #fff;
 }
 footer
 {
