@@ -129,6 +129,17 @@ Assuming that you don't see any red, you're ready to go. Just be sure to run `gr
 1. Update the documentation to reflect any changes.
 1. Push to your fork and submit a pull request.
 
+# Legal
+
+Important Notes about API Usage
+
+- Each user key is granted a limited number of calls per second and per day. If increased call limits are needed, you can email API-admin@flixster-inc.com with a request that includes your username/key, detailed description and screen grabs of your desired implementation, and current/expected calls per second and day. Emails without all of this informaton may not get a response.
+- The API is intended for use in the U.S. only. Deploying content outside of this territory must be approved by the Rotten Tomatoes team.
+- The API may NOT be sub-licensed to any third parties.
+- Rotten Tomatoes reserves the right to request links and/or screen grabs of your usage of Rotten Tomatoes content. If you do not comply, Rotten Tomatoes reserves the right to terminate your API license.
+
+More info [here](http://developer.rottentomatoes.com/forum/read/180292).
+
 **************************************************
 
-@ [The Jackal of Javascript](http://thejackalofjavascript.com)
+@ [The Jackal of Javascript](http://thejackalofjavascript.com/rotten-tomatoes-jquery-rest-client/)
